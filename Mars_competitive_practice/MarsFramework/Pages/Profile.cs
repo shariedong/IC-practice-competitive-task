@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using MarsFramework.Global;
 
 namespace MarsFramework
 {
@@ -11,7 +12,7 @@ namespace MarsFramework
             PageFactory.InitElements(Global.GlobalDefinitions.driver, this);
         }
 
-        #region  Initialize Web Elements
+        #region  Profile Setting elements 
 
         //Click on Edit button
         [FindsBy(How = How.XPath, Using = "//span[contains(text(),'Part Time')]//i[@class='right floated outline small write icon']")]
@@ -161,10 +162,26 @@ namespace MarsFramework
         [FindsBy(How = How.XPath, Using = "//*[@id='account-profileEdit-section']/div/section[2]/div/div/div/form/div[8]/div/div[4]/span/button[1]")]
         private IWebElement Save { get; set; }
 
+
+
+
         #endregion
 
-        internal void EnterProfile()
+        #region Search skill
+        [FindsBy(How = How.XPath, Using = ".//*[@placeholder='Search skills']")]
+        private IWebElement SearchSkillInput { get; set; }
+
+        [FindsBy(How = How.XPath, Using = ".//*[@class='search link icon']")]
+        private IWebElement SearchSkillIcon { get; set; }
+
+        #endregion
+        internal void SearchSkillByTitle()
         {
+            //wait for SearchSkillInput filed
+            GlobalDefinitions.ExcelLib.PopulateInCollection(Base.ExcelPath, "SearchSkill"); 
+            GlobalDefinitions.WaitForElement(GlobalDefinitions.driver, By.XPath(".//*[@placeholder='Search skills']"), 10);
+            SearchSkillInput.SendKeys(GlobalDefinitions.ExcelLib.ReadData(2, "SkillTitle"));
+            SearchSkillIcon.Click();
 
         }
         internal void EditProfile()

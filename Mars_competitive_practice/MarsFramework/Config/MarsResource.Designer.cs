@@ -97,7 +97,7 @@ namespace MarsFramework.Config {
         }
         
         /// <summary>
-        ///   查找类似 \MarsFramework 的本地化字符串。
+        ///   查找类似 C:\Users\Hui\source\repos\MARS\Mars_competitive_practice\MarsFramework 的本地化字符串。
         /// </summary>
         internal static string ReportXMLPath {
             get {
@@ -115,7 +115,7 @@ namespace MarsFramework.Config {
         }
         
         /// <summary>
-        ///   查找类似 \MarsFramework 的本地化字符串。
+        ///   查找类似 C:\Users\Hui\source\repos\MARS\Mars_competitive_practice\MarsFramework 的本地化字符串。
         /// </summary>
         internal static string ScreenShotPath {
             get {

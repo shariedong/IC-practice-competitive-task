@@ -125,11 +125,15 @@
     <Compile Include="Global\Base.cs" />
     <Compile Include="Global\GlobalDefinitions.cs" />
     <Compile Include="Pages\ManageListings.cs" />
+    <Compile Include="Pages\SearchSkillsPage.cs" />
     <Compile Include="Pages\ShareSkill.cs" />
     <Compile Include="Pages\SignIn.cs" />
     <Compile Include="Pages\SignUp.cs" />
     <Compile Include="Pages\Profile.cs" />
-    <Compile Include="Test\Program.cs" />
+    <Compile Include="Pages\TargetSkillPage.cs" />
+    <Compile Include="Test\SearchSkillsTestsuite.cs" />
+    <Compile Include="Test\ManageListingsTestsuites.cs" />
+    <Compile Include="Test\ShareSkillsTestSuites.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
