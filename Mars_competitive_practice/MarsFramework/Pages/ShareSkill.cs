@@ -108,6 +108,7 @@ namespace MarsFramework.Pages
 
         #endregion
 
+        #region Add a new skill
         internal void EnterShareSkill()
         {
             GlobalDefinitions.WaitForElement(GlobalDefinitions.driver, By.LinkText("Share Skill"), 10);
@@ -162,7 +163,7 @@ namespace MarsFramework.Pages
             return Afterworksample.Text;
         }
        
-        #region stuff unused
+        
         internal void EnterDescription()
         {
             

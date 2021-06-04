@@ -43,7 +43,7 @@ namespace MarsFramework.Pages
             MessageRequestBtn.Click();
         }
 
-        internal bool NotificationDisplayed()
+        internal bool EnableNotificationDisplayed()
         {
             GlobalDefinitions.WaitForElement(GlobalDefinitions.driver, By.XPath("//button[contains(text(),'Yes')]"), 10);
     

@@ -10,7 +10,7 @@ namespace MarsFramework.Pages
         //initialise the page object 
         public ManageListings()
         {
-            PageFactory.InitElements(Global.GlobalDefinitions.driver, this);
+            PageFactory.InitElements(GlobalDefinitions.driver, this);
         }
 
         //Click on Manage Listings Link

@@ -125,6 +125,7 @@
     <Compile Include="Global\Base.cs" />
     <Compile Include="Global\GlobalDefinitions.cs" />
     <Compile Include="Pages\ManageListings.cs" />
+    <Compile Include="Pages\ManageRequest.cs" />
     <Compile Include="Pages\SearchSkillsPage.cs" />
     <Compile Include="Pages\ShareSkill.cs" />
     <Compile Include="Pages\SignIn.cs" />
