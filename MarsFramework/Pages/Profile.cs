@@ -174,15 +174,27 @@ namespace MarsFramework
         [FindsBy(How = How.XPath, Using = ".//*[@class='search link icon']")]
         private IWebElement SearchSkillIcon { get; set; }
 
+
+        internal string ReadData(int i, string s)
+        {
+            return GlobalDefinitions.ExcelLib.ReadData(i, s);
+        }
+
         #endregion
         internal void SearchSkillByTitle()
         {
             //wait for SearchSkillInput filed
             GlobalDefinitions.ExcelLib.PopulateInCollection(Base.ExcelPath, "SearchSkill"); 
             GlobalDefinitions.WaitForElement(GlobalDefinitions.driver, By.XPath(".//*[@placeholder='Search skills']"), 10);
-            SearchSkillInput.SendKeys(GlobalDefinitions.ExcelLib.ReadData(2, "SkillTitle"));
+            SearchSkillInput.SendKeys(ReadData(2, "SkillTitle"));
             SearchSkillIcon.Click();
 
+        }
+
+        internal void ClickOnSearchSkillIcon()
+        {
+            GlobalDefinitions.WaitForElement(GlobalDefinitions.driver, By.XPath(".//*[@class='search link icon']"), 10);
+            SearchSkillIcon.Click();
         }
         internal void EditProfile()
         {

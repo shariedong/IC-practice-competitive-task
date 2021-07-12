@@ -36,6 +36,7 @@ namespace MarsFramework.Global
 
                 case 1:
                     GlobalDefinitions.driver = new FirefoxDriver();
+                    GlobalDefinitions.driver.Manage().Window.Maximize();
                     break;
                 case 2:
                     GlobalDefinitions.driver = new ChromeDriver();
@@ -53,6 +54,7 @@ namespace MarsFramework.Global
 
             if (MarsResource.IsLogin == "true")
             {
+                GlobalDefinitions.ExcelLib.PopulateInCollection(Base.ExcelPath, "SignIn");
                 SignIn loginobj = new SignIn();
                 loginobj.LoginSteps();
             }
@@ -79,8 +81,8 @@ namespace MarsFramework.Global
             // calling Flush writes everything to the log file (Reports)
             //extent.Flush();
             // Close the driver :)            
-            GlobalDefinitions.driver.Close();
-            GlobalDefinitions.driver.Quit();
+           // GlobalDefinitions.driver.Close();
+            //GlobalDefinitions.driver.Quit();
 
 
         }

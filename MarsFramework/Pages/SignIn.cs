@@ -34,9 +34,6 @@ namespace MarsFramework.Pages
         internal void LoginSteps()
         {
             //populateincollection
-            GlobalDefinitions.ExcelLib.PopulateInCollection(Base.ExcelPath, "SignIn");
-
-
             GlobalDefinitions.driver.Navigate().GoToUrl(GlobalDefinitions.ExcelLib.ReadData(2,"Url"));
             GlobalDefinitions.WaitForElement(GlobalDefinitions.driver, By.XPath("//a[contains(text(),'Sign In')]"), 10);
             SignIntab.Click();

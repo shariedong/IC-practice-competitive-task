@@ -15,6 +15,8 @@ namespace MarsFramework.Global
         //Initialise the browser
         public static IWebDriver driver { get; set; }
 
+        
+
         #region WaitforElement 
 
         public static void wait(int time)
@@ -85,6 +87,7 @@ namespace MarsFramework.Global
                     //Retriving Data using LINQ to reduce much of iterations
 
                     rowNumber = rowNumber - 1;
+                    Console.WriteLine(dataCol);
                     string data = (from colData in dataCol
                                    where colData.colName == columnName && colData.rowNumber == rowNumber
                                    select colData.colValue).SingleOrDefault();
@@ -128,6 +131,11 @@ namespace MarsFramework.Global
                 }
 
             }
+        }
+
+        internal static void Wait(int v1, int v2)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
